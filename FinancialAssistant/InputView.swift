@@ -20,12 +20,6 @@ class InputView: UIStackView {
     @IBOutlet weak var investmentDayTextField: UITextField!
     @IBOutlet weak var investmentMoneyTextField: UITextField!
 
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        investmentMoneyTextField.delegate = self
-    }
-
     func currentInterestRate() -> Double {
         return Double(currentInterestRateTextField.text ?? "0") ?? 0
     }
